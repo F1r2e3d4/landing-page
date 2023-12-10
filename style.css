@@ -460,6 +460,10 @@
          text-decoration: none;
          color: #fff;
     }
+
+    footer div .button{
+        text-align: center;
+    }
      .footer-navigation {
          display: grid;
          grid-template-columns: 1fr 1fr;
