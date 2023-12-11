@@ -22,10 +22,23 @@ x.addEventListener("change", () => {
   slideNo(commentIndex, x);
 })
 
+let comments = document.getElementsByClassName("slides");
+let dots = document.getElementsByClassName("dot");
+
+/* Adding the event listener for click events */
+
+for(const dot of dots){
+  dot.addEventListener('click', () => {
+    commentIndex = parseInt(dot.dataset.num) - 1
+    slideNo(commentIndex, x)
+    console.log(dot.dataset.num);
+  })
+}
+
+
 
 function slideNo(n, x) {
-  let comments = document.getElementsByClassName("slides");
-  let dots = document.getElementsByClassName("dot");
+  
   if(x.matches){
     
     if (n >= comments.length) commentIndex = 0;
