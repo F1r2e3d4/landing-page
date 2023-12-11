@@ -30,8 +30,7 @@ let dots = document.getElementsByClassName("dot");
 for(const dot of dots){
   dot.addEventListener('click', () => {
     commentIndex = parseInt(dot.dataset.num) - 1
-    slideNo(commentIndex, x)
-    console.log(dot.dataset.num);
+    slideNo(commentIndex, x);
   })
 }
 
