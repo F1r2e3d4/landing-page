@@ -1,14 +1,27 @@
 // Get references to the menu elements using querySelector
-const menuToggle = document.querySelector('#menu-toggle'); // Selects the first element with the class 'menu-toggle'
-const menu = document.querySelector('tablet-mobile-nav-list'); // Selects the first element with the class 'hidden'
+const menuToggle = document.getElementById('menu-toggle'); // Selects the first element with the class 'menu-toggle'
+const menu = document.getElementsByClassName('tablet-mobile-nav-list'); // Selects the first element with the class 'hidden'
 
 // Function to toggle menu visibility
 function toggleMenu() {
   menu.classList.toggle('positioning'); // Toggle the 'show-menu' class to show/hide the menu
 }
 
+// Toggle nav-bar Mobile and Tablet
+
+function toggleNavigationBar(){
+  if(menu[0].style.visibility != 'visible'){
+    menu[0].style.visibility = 'visible';
+    menuToggle.children[0].src = "./images/icon-close.svg"
+  }else{
+    menu[0].style.visibility = 'hidden'
+    menuToggle.children[0].src = "./images/icon-hamburger.svg"
+  }
+}
+
+
 // Event listener for button click to toggle the menu
-menuToggle.addEventListener('click', toggleMenu);
+/* menuToggle.addEventListener('click', toggleMenu); */
 
 
 // Carousel Logic
